@@ -7,7 +7,7 @@ import {Duration} from "aws-cdk-lib";
 
 // import * as sqs from 'aws-cdk-lib/aws-sqs';
 
-export class VpcStack extends cdk.Stack {
+export class NetworkStack extends cdk.Stack {
 
   public readonly myVpc : ec2.Vpc;
   private readonly ipAddresses : ec2.IpAddresses
@@ -44,7 +44,7 @@ export class VpcStack extends cdk.Stack {
           `${this.myVpc.node.id}-${subnet.node.id.replace(/Subnet[0-9]$/, '')}-${subnet.availabilityZone}`
       ))
     }
-    //Tagiranje na private subnets
+    // Tagiranje na private subnets
     for (const subnet of this.myVpc.isolatedSubnets){
       cdk.Aspects.of(subnet).add(new cdk.Tag(
           'Name',

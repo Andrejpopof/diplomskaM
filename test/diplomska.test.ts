@@ -3,11 +3,11 @@
 // import * as Diplomska from '../lib/diplomska-stack';
 
 // example test. To run these tests, uncomment this file along with the
-// example resource in lib/diplomska-stack.ts
+// example resource in lib/network-stack.ts
 test('SQS Queue Created', () => {
 //   const app = new cdk.App();
 //     // WHEN
-//   const stack = new Diplomska.DiplomskaStack(app, 'MyTestStack');
+//   const stack = new Diplomska.NetworkStack(app, 'MyTestStack');
 //     // THEN
 //   const template = Template.fromStack(stack);
 
